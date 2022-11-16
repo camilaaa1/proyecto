@@ -7,6 +7,25 @@ public class Dos {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+		String menu="Seleccione si: \n"
+				+ "1. Quiere jugar un partido o ver las estadísticas del equipo.\n"
+				+ "2. Lo otro que haya\n"
+				+ "3. Salir";
+
+		int opcion=0;
+		do {opcion=Integer.parseInt(JOptionPane.showInputDialog(menu));
+		switch (opcion)
+		{
+		case 1:
+			seleccion();
+			break;
+		case 2:
+			
+			break;
+		}
+		}while(opcion!=3);
+	}
+	public static void seleccion(){
 		String textopart [] = {"\tPartidos jugados\tPartidos ganados\tPartidos empatados"
 				+"\tPartidos perdidos\tGoles a favor\t\tGoles en contra\t\tPuntos equipo"};
 
@@ -23,26 +42,6 @@ public class Dos {
 				resultados [x][y] = 4;
 			}
 		}
-
-		String menu="Seleccione si: \n"
-				+ "1. Quiere jugar un partido o ver las estadísticas del equipo.\n"
-				+ "2. Lo otro que haya\n"
-				+ "3. Salir";
-
-		int opcion=0;
-		do {opcion=Integer.parseInt(JOptionPane.showInputDialog(menu));
-		switch (opcion)
-		{
-		case 1:
-			seleccion(resultados,partidosest,equipos,equipost,textopart);
-			break;
-		case 2:
-			
-			break;
-		}
-		}while(opcion!=3);
-	}
-	public static void seleccion(int [][]resultados,int [][]partidosest,String [] equipos,String []equipost,String []textopart){
 		String menu="Seleccione si: \n"
 				+ "1. Quiere jugar un partido.\n"
 				+ "2. Ver las estadísticas de los equipos\n"
@@ -67,22 +66,22 @@ public class Dos {
 		String eleccion1 ="";
 
 		eleccion = JOptionPane.showInputDialog("Seleccione un equipo que va a jugar, siendo:\n"
-				+"1.Para equipo 1\n"
-				+"2.Para equipo 2\n"
-				+"3.Para equipo 3\n"
-				+"4.Para equipo 4\n"
-				+"5.Para equipo 5\n"
-				+"6.Para equipo 6\n");
+				+"1. " + equipost [0] + "\n"
+				+ "2. " + equipost [1] + "\n"
+				+ "3. " + equipost [2] + "\n"
+				+ "4. " + equipost [3] + "\n"
+				+ "5. " + equipost [4] + "\n"
+				+ "6. " + equipost [5]);
 
 		switch (Integer.parseInt(eleccion)) {
 		case 1:
 			eleccion1 = JOptionPane.showInputDialog("Seleccione el otro equipo que va a jugar, siendo:\n"
-					+"1.Para equipo 1\n"
-					+"2.Para equipo 2\n"
-					+"3.Para equipo 3\n"
-					+"4.Para equipo 4\n"
-					+"5.Para equipo 5\n"
-					+"6.Para equipo 6\n");
+					+"1. " + equipost [0] + "\n"
+					+ "2. " + equipost [1] + "\n"
+					+ "3. " + equipost [2] + "\n"
+					+ "4. " + equipost [3] + "\n"
+					+ "5. " + equipost [4] + "\n"
+					+ "6. " + equipost [5]);
 
 			switch (Integer.parseInt(eleccion1)) {
 			case 1:
@@ -142,12 +141,12 @@ public class Dos {
 			break;
 		case 2:
 			eleccion1 = JOptionPane.showInputDialog("Seleccione el otro equipo que va a jugar, siendo:\n"
-					+"1.Para equipo 1\n"
-					+"2.Para equipo 2\n"
-					+"3.Para equipo 3\n"
-					+"4.Para equipo 4\n"
-					+"5.Para equipo 5\n"
-					+"6.Para equipo 6\n");
+					+"1. " + equipost [0] + "\n"
+					+ "2. " + equipost [1] + "\n"
+					+ "3. " + equipost [2] + "\n"
+					+ "4. " + equipost [3] + "\n"
+					+ "5. " + equipost [4] + "\n"
+					+ "6. " + equipost [5]);
 
 			switch (Integer.parseInt(eleccion1)) {
 			case 2:
@@ -207,12 +206,12 @@ public class Dos {
 			break;
 		case 3:
 			eleccion1 = JOptionPane.showInputDialog("Seleccione el otro equipo que va a jugar, siendo:\n"
-					+"1.Para equipo 1\n"
-					+"2.Para equipo 2\n"
-					+"3.Para equipo 3\n"
-					+"4.Para equipo 4\n"
-					+"5.Para equipo 5\n"
-					+"6.Para equipo 6\n");
+					+"1. " + equipost [0] + "\n"
+					+ "2. " + equipost [1] + "\n"
+					+ "3. " + equipost [2] + "\n"
+					+ "4. " + equipost [3] + "\n"
+					+ "5. " + equipost [4] + "\n"
+					+ "6. " + equipost [5]);
 
 			switch (Integer.parseInt(eleccion1)) {
 			case 3:
@@ -272,12 +271,12 @@ public class Dos {
 			break;
 		case 4:
 			eleccion1 = JOptionPane.showInputDialog("Seleccione el otro equipo que va a jugar, siendo:\n"
-					+"1.Para equipo 1\n"
-					+"2.Para equipo 2\n"
-					+"3.Para equipo 3\n"
-					+"4.Para equipo 4\n"
-					+"5.Para equipo 5\n"
-					+"6.Para equipo 6\n");
+					+"1. " + equipost [0] + "\n"
+					+ "2. " + equipost [1] + "\n"
+					+ "3. " + equipost [2] + "\n"
+					+ "4. " + equipost [3] + "\n"
+					+ "5. " + equipost [4] + "\n"
+					+ "6. " + equipost [5]);
 
 			switch (Integer.parseInt(eleccion1)) {
 			case 4:
@@ -337,12 +336,12 @@ public class Dos {
 			break;
 		case 5:
 			eleccion1 = JOptionPane.showInputDialog("Seleccione el otro equipo que va a jugar, siendo:\n"
-					+"1.Para equipo 1\n"
-					+"2.Para equipo 2\n"
-					+"3.Para equipo 3\n"
-					+"4.Para equipo 4\n"
-					+"5.Para equipo 5\n"
-					+"6.Para equipo 6\n");
+					+"1. " + equipost [0] + "\n"
+					+ "2. " + equipost [1] + "\n"
+					+ "3. " + equipost [2] + "\n"
+					+ "4. " + equipost [3] + "\n"
+					+ "5. " + equipost [4] + "\n"
+					+ "6. " + equipost [5]);
 
 			switch (Integer.parseInt(eleccion1)) {
 			case 5:
@@ -402,12 +401,12 @@ public class Dos {
 			break;
 		case 6:
 			eleccion1 = JOptionPane.showInputDialog("Seleccione el otro equipo que va a jugar, siendo:\n"
-					+"1.Para equipo 1\n"
-					+"2.Para equipo 2\n"
-					+"3.Para equipo 3\n"
-					+"4.Para equipo 4\n"
-					+"5.Para equipo 5\n"
-					+"6.Para equipo 6\n");
+					+"1. " + equipost [0] + "\n"
+					+ "2. " + equipost [1] + "\n"
+					+ "3. " + equipost [2] + "\n"
+					+ "4. " + equipost [3] + "\n"
+					+ "5. " + equipost [4] + "\n"
+					+ "6. " + equipost [5]);
 
 			switch (Integer.parseInt(eleccion1)) {
 			case 6:
