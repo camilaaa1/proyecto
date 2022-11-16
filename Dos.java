@@ -9,12 +9,12 @@ public class Dos {
 
 		String textopart [] = {"\tPartidos jugados\tPartidos ganados\tPartidos empatados"
 				+"\tPartidos perdidos\tGoles a favor\t\tGoles en contra\t\tPuntos equipo"};
-		
+
 		String equipos [] = {"\nBrasil\t","\nMexico\t","\nColombia","\nVenezuela","\nEcuador\t"
-		,"\nPeru\t"};
+				,"\nPeru\t"};
 		String equipost [] = {"Brasil","Mexico","Colombia","Venezuela","Ecuador"
 				,"Peru"};
-		
+
 		int partidosest [][]=new int [6][7];
 
 		int resultados[][] = new int [6][6];
@@ -25,13 +25,31 @@ public class Dos {
 		}
 
 		String menu="Seleccione si: \n"
-				+ "1. Quiere jugar un partido.\n"
-				+ "2. Quiere ver la cantidad de partidas ganados, perdidos, y empatados.\n"
-				+ "3. Quiere ver la cantidad de goles favor y en contra de los equipos.\n"
-				+ "4. Salir";
+				+ "1. Quiere jugar un partido o ver las estadísticas del equipo.\n"
+				+ "2. Lo otro que haya\n"
+				+ "3. Salir";
 
 		int opcion=0;
 		do {opcion=Integer.parseInt(JOptionPane.showInputDialog(menu));
+		switch (opcion)
+		{
+		case 1:
+			seleccion(resultados,partidosest,equipos,equipost,textopart);
+			break;
+		case 2:
+			
+			break;
+		}
+		}while(opcion!=3);
+	}
+	public static void seleccion(int [][]resultados,int [][]partidosest,String [] equipos,String []equipost,String []textopart){
+		String menu="Seleccione si: \n"
+				+ "1. Quiere jugar un partido.\n"
+				+ "2. Ver las estadísticas de los equipos\n"
+				+ "3. Salir";
+
+		int opcion=0;
+		opcion=Integer.parseInt(JOptionPane.showInputDialog(menu));
 		switch (opcion)
 		{
 		case 1:
@@ -40,19 +58,14 @@ public class Dos {
 		case 2:
 			Resultadospartidos(partidosest,textopart,equipos,equipost);
 			break;
-		case 3:
-			break;
-		case 4:
-			break;
 		}
-		}while(opcion!=4);
 	}
 
 	public  static void Partidos (int [][] resultados,int [][]partidosest,String[]equipos,String []equipost) {
 		int ronda = 0;
 		String eleccion ="";
 		String eleccion1 ="";
-		
+
 		eleccion = JOptionPane.showInputDialog("Seleccione un equipo que va a jugar, siendo:\n"
 				+"1.Para equipo 1\n"
 				+"2.Para equipo 2\n"
@@ -454,7 +467,7 @@ public class Dos {
 			break;
 		}
 		if (ronda == 30) {
-		resultados(equipos);
+			resultados(equipos);
 		}
 	}
 
@@ -488,11 +501,11 @@ public class Dos {
 			partidosest[0][6]+=3;
 			partidosest[0][1]+=1;
 			partidosest[0][0]+=1;
-			
+
 			partidosest[x][6]+=0;
 			partidosest[x][3]+=1;
 			partidosest[x][0]+=1;
-			
+
 			Goles = (int) Math.floor(Math.random() * (max1 - min1 + 1) ) + min;
 			partidosest[0][4]+= Goles;
 			partidosest[x][6]+= Goles;
@@ -507,11 +520,11 @@ public class Dos {
 			partidosest[0][2]+=1;
 			partidosest[0][0]+=1;
 			partidosest[0][6]+=1;
-			
+
 			partidosest[x][2]+=1;
 			partidosest[x][0]+=1;
 			partidosest[x][6]+=1;
-			
+
 			Goles = (int) Math.floor(Math.random() * (max1 - min1 + 1) ) + min;
 			partidosest[x][4]+=Goles;
 			partidosest[0][5]+= Goles;
@@ -523,11 +536,11 @@ public class Dos {
 			partidosest[0][3]+=1;
 			partidosest[0][0]+=1;
 			partidosest[0][6]+=0;
-			
+
 			partidosest[x][1]+=1;
 			partidosest[x][0]+=1;
 			partidosest[x][6]+=3;
-			
+
 			Goles = (int) Math.floor(Math.random() * (max1 - min1 + 1) ) + min;
 			partidosest[0][4]+= Goles;
 			partidosest[x][5]+= Goles;
@@ -568,11 +581,11 @@ public class Dos {
 			partidosest[1][1]+=1;
 			partidosest[1][0]+=1;
 			partidosest[1][6]+=3;
-			
+
 			partidosest[x][3]+=1;
 			partidosest[x][0]+=1;
 			partidosest[x][6]+=0;
-			
+
 			Goles = (int) Math.floor(Math.random() * (max1 - min1 + 1) ) + min;
 			partidosest[1][4]+= Goles;
 			partidosest[x][5]+= Goles;
@@ -587,15 +600,15 @@ public class Dos {
 			partidosest[1][2]+=1;
 			partidosest[1][0]+=1;
 			partidosest[1][6]+=1;
-			
+
 			partidosest[x][2]+=1;
 			partidosest[x][0]+=1;
 			partidosest[x][6]+=1;
-			
+
 			Goles = (int) Math.floor(Math.random() * (max1 - min1 + 1) ) + min;
 			partidosest[x][4]+=Goles;
 			partidosest[1][4]+= Goles;
-			
+
 			partidosest[1][5]+= Goles;
 			partidosest[x][5]+= Goles;
 		}
@@ -604,11 +617,11 @@ public class Dos {
 			partidosest[1][3]+=1;
 			partidosest[1][0]+=1;
 			partidosest[1][6]+=0;
-			
+
 			partidosest[x][1]+=1;
 			partidosest[x][0]+=1;
 			partidosest[x][6]+=3;
-			
+
 			Goles = (int) Math.floor(Math.random() * (max1 - min1 + 1) ) + min;
 			partidosest[1][4]+= Goles;
 			partidosest[x][5]+= Goles;
@@ -649,11 +662,11 @@ public class Dos {
 			partidosest[2][1]+=1;
 			partidosest[2][0]+=1;
 			partidosest[2][6]+=3;
-			
+
 			partidosest[x][3]+=1;
 			partidosest[x][0]+=1;
 			partidosest[x][6]+=0;
-			
+
 			Goles = (int) Math.floor(Math.random() * (max1 - min1 + 1) ) + min;
 			partidosest[2][4]+= Goles;
 			partidosest[x][5]+= Goles;
@@ -668,15 +681,15 @@ public class Dos {
 			partidosest[2][2]+=1;
 			partidosest[2][0]+=1;
 			partidosest[2][6]+=1;
-			
+
 			partidosest[x][2]+=1;
 			partidosest[x][0]+=1;
 			partidosest[x][6]+=1;
-			
+
 			Goles = (int) Math.floor(Math.random() * (max1 - min1 + 1) ) + min;
 			partidosest[x][4]+=Goles;
 			partidosest[2][4]+= Goles;
-			
+
 			partidosest[2][5]+= Goles;
 			partidosest[x][5]+= Goles;
 		}
@@ -685,11 +698,11 @@ public class Dos {
 			partidosest[2][3]+=1;
 			partidosest[2][0]+=1;
 			partidosest[2][6]+=0;
-			
+
 			partidosest[x][1]+=1;
 			partidosest[x][0]+=1;
 			partidosest[x][6]+=3;
-			
+
 			Goles = (int) Math.floor(Math.random() * (max1 - min1 + 1) ) + min;
 			partidosest[2][4]+= Goles;
 			partidosest[x][5]+= Goles;
@@ -730,11 +743,11 @@ public class Dos {
 			partidosest[3][1]+=1;
 			partidosest[3][0]+=1;
 			partidosest[3][6]+=3;
-			
+
 			partidosest[x][3]+=1;
 			partidosest[x][0]+=1;
 			partidosest[x][6]+=0;
-			
+
 			Goles = (int) Math.floor(Math.random() * (max1 - min1 + 1) ) + min;
 			partidosest[3][4]+= Goles;
 			partidosest[x][5]+= Goles;
@@ -749,15 +762,15 @@ public class Dos {
 			partidosest[3][2]+=1;
 			partidosest[3][0]+=1;
 			partidosest[3][6]+=1;
-			
+
 			partidosest[x][2]+=1;
 			partidosest[x][0]+=1;
 			partidosest[x][6]+=1;
-			
+
 			Goles = (int) Math.floor(Math.random() * (max1 - min1 + 1) ) + min;
 			partidosest[x][4]+=Goles;
 			partidosest[3][4]+= Goles;
-			
+
 			partidosest[x][5]+= Goles;
 			partidosest[3][5]+= Goles;
 		}
@@ -766,11 +779,11 @@ public class Dos {
 			partidosest[3][3]+=1;
 			partidosest[3][0]+=1;
 			partidosest[3][6]+=0;
-			
+
 			partidosest[x][1]+=1;
 			partidosest[x][0]+=1;
 			partidosest[x][6]+=3;
-			
+
 			Goles = (int) Math.floor(Math.random() * (max1 - min1 + 1) ) + min;
 			partidosest[3][4]+= Goles;
 			partidosest[x][5]+= Goles;
@@ -811,11 +824,11 @@ public class Dos {
 			partidosest[4][1]+=1;
 			partidosest[4][0]+=1;
 			partidosest[4][6]+=3;
-			
+
 			partidosest[x][3]+=1;
 			partidosest[x][0]+=1;
 			partidosest[x][6]+=0;
-			
+
 			Goles = (int) Math.floor(Math.random() * (max1 - min1 + 1) ) + min;
 			partidosest[4][4]+= Goles;
 			partidosest[x][5]+= Goles;
@@ -830,15 +843,15 @@ public class Dos {
 			partidosest[4][2]+=1;
 			partidosest[4][0]+=1;
 			partidosest[4][6]+=1;
-			
+
 			partidosest[x][2]+=1;
 			partidosest[x][0]+=1;
 			partidosest[x][6]+=1;
-			
+
 			Goles = (int) Math.floor(Math.random() * (max1 - min1 + 1) ) + min;
 			partidosest[x][4]+=Goles;
 			partidosest[4][4]+= Goles;
-			
+
 			partidosest[x][5]+= Goles;
 			partidosest[4][5]+= Goles;
 		}
@@ -847,11 +860,11 @@ public class Dos {
 			partidosest[4][3]+=1;
 			partidosest[4][0]+=1;
 			partidosest[4][6]+=0;
-			
+
 			partidosest[x][1]+=1;
 			partidosest[x][0]+=1;
 			partidosest[x][6]+=3;
-			
+
 			Goles = (int) Math.floor(Math.random() * (max1 - min1 + 1) ) + min;
 			partidosest[4][4]+= Goles;
 			partidosest[x][5]+= Goles;
@@ -892,11 +905,11 @@ public class Dos {
 			partidosest[5][1]+=1;
 			partidosest[5][0]+=1;
 			partidosest[5][6]+=3;
-			
+
 			partidosest[x][3]+=1;
 			partidosest[x][0]+=1;
 			partidosest[x][6]+=0;
-			
+
 			Goles = (int) Math.floor(Math.random() * (max1 - min1 + 1) ) + min;
 			partidosest[5][4]+= Goles;
 			partidosest[x][5]+= Goles;
@@ -911,15 +924,15 @@ public class Dos {
 			partidosest[5][2]+=1;
 			partidosest[5][0]+=1;
 			partidosest[5][6]+=1;
-			
+
 			partidosest[x][2]+=1;
 			partidosest[x][0]+=1;
 			partidosest[x][6]+=1;
-			
+
 			Goles = (int) Math.floor(Math.random() * (max1 - min1 + 1) ) + min;
 			partidosest[x][4]+=Goles;
 			partidosest[5][4]+= Goles;
-			
+
 			partidosest[x][5]+= Goles;
 			partidosest[5][5]+= Goles;
 		}
@@ -928,11 +941,11 @@ public class Dos {
 			partidosest[5][3]+=1;
 			partidosest[5][0]+=1;
 			partidosest[5][6]+=0;
-			
+
 			partidosest[x][1]+=1;
 			partidosest[x][0]+=1;
 			partidosest[5][6]+=3;
-			
+
 			Goles = (int) Math.floor(Math.random() * (max1 - min1 + 1) ) + min;
 			partidosest[5][4]+= Goles;
 			partidosest[x][5]+= Goles;
@@ -955,7 +968,7 @@ public class Dos {
 				+ "6. " + equipost [5] + "\n"
 				+ "7. Estadísticas de todos los equipos";
 		int opcion;
-			
+
 		switch (opcion = Integer.parseInt(JOptionPane.showInputDialog(menu))){
 		case 1:
 			estadisticase1(partidosest,equipost);
@@ -1021,16 +1034,16 @@ public class Dos {
 
 		String[] orden = new String [1];
 		int [] ayuda = new int[1];
-		
+
 		for(int a = 0;a<partidosest.length;a++) {
 			for(int x = 0; x<partidosest.length-1;x++) {
-				
+
 				if (partidosest[x][6]<partidosest[x+1][6]) {
 					orden [0]=equipos[x];
 					equipos[x]=equipos[x+1];
 					equipos[x+1] = orden [0];
 				}
-				
+
 				for (int y = 0;y<partidosest[x].length;y++) {
 					if (partidosest[x][6]<partidosest[x+1][6]) {
 						ayuda [0]=partidosest[x][y];
@@ -1040,12 +1053,12 @@ public class Dos {
 				}
 			}
 		}
-		
+
 		System.out.println(textopart[0]);
 		for (int i = 0; i<partidosest.length;i++) {
 			System.out.print(equipos [i]+"\t");
 			for (int j = 0; j<partidosest[i].length;j++) {
-			System.out.print(partidosest[i][j]+"\t\t\t");	
+				System.out.print(partidosest[i][j]+"\t\t\t");	
 			}
 			System.out.println();
 		}
