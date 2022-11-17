@@ -2538,19 +2538,19 @@ public static void equipo2p(int x, int resultados[][]) {
 	valorAleatorio = (int) Math.floor(Math.random() * (max - min + 1) ) + min;
 	switch (valorAleatorio) {
 	case 1:
-		resultados [0][x] = 0;
-		resultados [x][0] = 3;
+		resultados [1][x] = 0;
+		resultados [x][1] = 3;
 		break;
 	case 2:
-		resultados [0][x] = 1;
-		resultados [x][0] = 1;
+		resultados [1][x] = 1;
+		resultados [x][1] = 1;
 		break;
 	case 3:
-		resultados [0][x] = 3;
-		resultados [x][0] = 0;
+		resultados [1][x] = 3;
+		resultados [x][1] = 0;
 		break;
 	}
-	if (resultados [0][x] == 0) {
+	if (resultados [1][x] == 0) {
 		texto = "Ganó";
 		partidosest[1][1]+=1;
 		partidosest[1][0]+=1;
@@ -2569,7 +2569,7 @@ public static void equipo2p(int x, int resultados[][]) {
 			partidosest[1][5]+= Goles;
 		}while(partidosest[1][4]<=partidosest[x][4]);
 	}
-	if (resultados [0][x] == 1) {
+	if (resultados [1][x] == 1) {
 		texto = "Empató";
 		partidosest[1][2]+=1;
 		partidosest[1][0]+=1;
@@ -2586,7 +2586,7 @@ public static void equipo2p(int x, int resultados[][]) {
 		partidosest[1][5]+= Goles;
 		partidosest[x][5]+= Goles;
 	}
-	if (resultados [0][x] == 3) {
+	if (resultados [1][x] == 3) {
 		texto = "Perdió";
 		partidosest[1][3]+=1;
 		partidosest[1][0]+=1;
@@ -2619,19 +2619,19 @@ public static void equipo3p(int x, int resultados[][]) {
 	valorAleatorio = (int) Math.floor(Math.random() * (max - min + 1) ) + min;
 	switch (valorAleatorio) {
 	case 1:
-		resultados [0][x] = 0;
-		resultados [x][0] = 3;
+		resultados [2][x] = 0;
+		resultados [x][2] = 3;
 		break;
 	case 2:
-		resultados [0][x] = 1;
-		resultados [x][0] = 1;
+		resultados [2][x] = 1;
+		resultados [x][2] = 1;
 		break;
 	case 3:
-		resultados [0][x] = 3;
-		resultados [x][0] = 0;
+		resultados [2][x] = 3;
+		resultados [x][2] = 0;
 		break;
 	}
-	if (resultados [0][x] == 0) {
+	if (resultados [2][x] == 0) {
 		texto = "Ganó";
 		partidosest[2][1]+=1;
 		partidosest[2][0]+=1;
@@ -2650,7 +2650,7 @@ public static void equipo3p(int x, int resultados[][]) {
 			partidosest[2][5]+= Goles;
 		}while(partidosest[2][4]<=partidosest[x][4]);
 	}
-	if (resultados [0][x] == 1) {
+	if (resultados [2][x] == 1) {
 		texto = "Empató";
 		partidosest[2][2]+=1;
 		partidosest[2][0]+=1;
@@ -2667,7 +2667,7 @@ public static void equipo3p(int x, int resultados[][]) {
 		partidosest[2][5]+= Goles;
 		partidosest[x][5]+= Goles;
 	}
-	if (resultados [0][x] == 3) {
+	if (resultados [2][x] == 3) {
 		texto = "Perdió";
 		partidosest[2][3]+=1;
 		partidosest[2][0]+=1;
@@ -2700,19 +2700,19 @@ public static void equipo4p(int x, int resultados[][]) {
 	valorAleatorio = (int) Math.floor(Math.random() * (max - min + 1) ) + min;
 	switch (valorAleatorio) {
 	case 1:
-		resultados [0][x] = 0;
-		resultados [x][0] = 3;
+		resultados [3][x] = 0;
+		resultados [x][3] = 3;
 		break;
 	case 2:
-		resultados [0][x] = 1;
-		resultados [x][0] = 1;
+		resultados [3][x] = 1;
+		resultados [x][3] = 1;
 		break;
 	case 3:
-		resultados [0][x] = 3;
-		resultados [x][0] = 0;
+		resultados [3][x] = 3;
+		resultados [x][3] = 0;
 		break;
 	}
-	if (resultados [0][x] == 0) {
+	if (resultados [3][x] == 0) {
 		texto = "Ganó";
 		partidosest[3][1]+=1;
 		partidosest[3][0]+=1;
@@ -2731,7 +2731,7 @@ public static void equipo4p(int x, int resultados[][]) {
 			partidosest[3][5]+= Goles;
 		}while(partidosest[3][4]<=partidosest[x][4]);
 	}
-	if (resultados [0][x] == 1) {
+	if (resultados [3][x] == 1) {
 		texto = "Empató";
 		partidosest[3][2]+=1;
 		partidosest[3][0]+=1;
@@ -2748,7 +2748,7 @@ public static void equipo4p(int x, int resultados[][]) {
 		partidosest[x][5]+= Goles;
 		partidosest[3][5]+= Goles;
 	}
-	if (resultados [0][x] == 3) {
+	if (resultados [3][x] == 3) {
 		texto = "Perdió";
 		partidosest[3][3]+=1;
 		partidosest[3][0]+=1;
@@ -2781,19 +2781,19 @@ public static void equipo5p(int x, int resultados[][]) {
 	valorAleatorio = (int) Math.floor(Math.random() * (max - min + 1) ) + min;
 	switch (valorAleatorio) {
 	case 1:
-		resultados [0][x] = 0;
-		resultados [x][0] = 3;
+		resultados [4][x] = 0;
+		resultados [x][4] = 3;
 		break;
 	case 2:
-		resultados [0][x] = 1;
-		resultados [x][0] = 1;
+		resultados [4][x] = 1;
+		resultados [x][4] = 1;
 		break;
 	case 3:
-		resultados [0][x] = 3;
-		resultados [x][0] = 0;
+		resultados [4][x] = 3;
+		resultados [x][4] = 0;
 		break;
 	}
-	if (resultados [0][x] == 0) {
+	if (resultados [4][x] == 0) {
 		texto = "Ganó";
 		partidosest[4][1]+=1;
 		partidosest[4][0]+=1;
@@ -2812,7 +2812,7 @@ public static void equipo5p(int x, int resultados[][]) {
 			partidosest[4][5]+= Goles;
 		}while(partidosest[4][4]<=partidosest[x][4]);
 	}
-	if (resultados [0][x] == 1) {
+	if (resultados [4][x] == 1) {
 		texto = "Empató";
 		partidosest[4][2]+=1;
 		partidosest[4][0]+=1;
@@ -2829,7 +2829,7 @@ public static void equipo5p(int x, int resultados[][]) {
 		partidosest[x][5]+= Goles;
 		partidosest[4][5]+= Goles;
 	}
-	if (resultados [0][x] == 3) {
+	if (resultados [4][x] == 3) {
 		texto = "Perdió";
 		partidosest[4][3]+=1;
 		partidosest[4][0]+=1;
@@ -2862,19 +2862,19 @@ public static void equipo6p(int x, int resultados[][]) {
 	valorAleatorio = (int) Math.floor(Math.random() * (max - min + 1) ) + min;
 	switch (valorAleatorio) {
 	case 1:
-		resultados [0][x] = 0;
-		resultados [x][0] = 3;
+		resultados [5][x] = 0;
+		resultados [x][5] = 3;
 		break;
 	case 2:
-		resultados [0][x] = 1;
-		resultados [x][0] = 1;
+		resultados [5][x] = 1;
+		resultados [x][5] = 1;
 		break;
 	case 3:
-		resultados [0][x] = 3;
-		resultados [x][0] = 0;
+		resultados [5][x] = 3;
+		resultados [x][5] = 0;
 		break;
 	}
-	if (resultados [0][x] == 0) {
+	if (resultados [5][x] == 0) {
 		texto = "Ganó";
 		partidosest[5][1]+=1;
 		partidosest[5][0]+=1;
@@ -2893,7 +2893,7 @@ public static void equipo6p(int x, int resultados[][]) {
 			partidosest[5][5]+= Goles;
 		}while(partidosest[5][4]<=partidosest[x][4]);
 	}
-	if (resultados [0][x] == 1) {
+	if (resultados [5][x] == 1) {
 		texto = "Empató";
 		partidosest[5][2]+=1;
 		partidosest[5][0]+=1;
@@ -2910,7 +2910,7 @@ public static void equipo6p(int x, int resultados[][]) {
 		partidosest[x][5]+= Goles;
 		partidosest[5][5]+= Goles;
 	}
-	if (resultados [0][x] == 3) {
+	if (resultados [5][x] == 3) {
 		texto = "Perdió";
 		partidosest[5][3]+=1;
 		partidosest[5][0]+=1;
@@ -2929,7 +2929,7 @@ public static void equipo6p(int x, int resultados[][]) {
 			partidosest[5][5]+= Goles;
 		}while(partidosest[5][4]>=partidosest[x][4]);
 	}
-	System.out.println(equipost [5] +" "+ texto + " contra " + equipost [5]);
+	System.out.println(equipost [5] +" "+ texto + " contra " + equipost [x]);
 }
 
 public  static void Partidosm (int [][] resultados) {
@@ -3449,7 +3449,7 @@ public static void equipo2pm(int x, int resultados[][]) {
 		break;
 	case 3:
 		resultados [1][x] = 3;
-		resultados [x][0] = 0;
+		resultados [x][1] = 0;
 		break;
 	}
 	if (resultados [1][x] == 0) {
@@ -3517,22 +3517,22 @@ public static void equipo3pm(int x, int resultados[][]) {
 	String eleccion;
 
 	eleccion = JOptionPane.showInputDialog("Seleccione si:\n"
-			+"1.Brasil ganó\n"
+			+"1.Colombia ganó\n"
 			+"2.Los equipos empataron\n"
-			+"3.Brasil perdió");
+			+"3.Colombia perdió");
 
 	switch (Integer.parseInt(eleccion)) {
 	case 1:
 		resultados [2][x] = 0;
-		resultados [x][0] = 3;
+		resultados [x][2] = 3;
 		break;
 	case 2:
 		resultados [2][x] = 1;
-		resultados [x][0] = 1;
+		resultados [x][2] = 1;
 		break;
 	case 3:
 		resultados [2][x] = 3;
-		resultados [x][0] = 0;
+		resultados [x][2] = 0;
 		break;
 	}
 	if (resultados [2][x] == 0) {
@@ -3611,11 +3611,11 @@ public static void equipo4pm(int x, int resultados[][]) {
 		break;
 	case 2:
 		resultados [3][x] = 1;
-		resultados [x][0] = 1;
+		resultados [x][3] = 1;
 		break;
 	case 3:
 		resultados [3][x] = 3;
-		resultados [x][0] = 0;
+		resultados [x][3] = 0;
 		break;
 	}
 	if (resultados [3][x] == 0) {
@@ -3691,15 +3691,15 @@ public static void equipo5pm(int x, int resultados[][]) {
 	switch (Integer.parseInt(eleccion))  {
 	case 1:
 		resultados [4][x] = 0;
-		resultados [x][0] = 3;
+		resultados [x][4] = 3;
 		break;
 	case 2:
 		resultados [4][x] = 1;
-		resultados [x][0] = 1;
+		resultados [x][4] = 1;
 		break;
 	case 3:
 		resultados [4][x] = 3;
-		resultados [x][0] = 0;
+		resultados [x][4] = 0;
 		break;
 	}
 	if (resultados [4][x] == 0) {
@@ -3768,22 +3768,22 @@ public static void equipo6pm(int x, int resultados[][]) {
 	String eleccion;
 	
 	eleccion = JOptionPane.showInputDialog("Seleccione si:\n"
-			+"1.México ganó\n"
+			+"1.Perú ganó\n"
 			+"2.Los equipos empataron\n"
-			+"3.México perdió");
+			+"3.Perú perdió");
 
 	switch (Integer.parseInt(eleccion))  {
 	case 1:
 		resultados [5][x] = 0;
-		resultados [x][0] = 3;
+		resultados [x][5] = 3;
 		break;
 	case 2:
 		resultados [5][x] = 1;
-		resultados [x][0] = 1;
+		resultados [x][5] = 1;
 		break;
 	case 3:
 		resultados [5][x] = 3;
-		resultados [x][0] = 0;
+		resultados [x][5] = 0;
 		break;
 	}
 	if (resultados [5][x] == 0) {
